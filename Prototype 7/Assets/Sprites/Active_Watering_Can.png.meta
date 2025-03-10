@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Active_Watering_Can_0: -3173792647972723700
+      Active_Watering_Can_1: -3889767912151902575
+      Active_Watering_Can_2: -3804339094993664903
+      Active_Watering_Can_3: -7015458136565270242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

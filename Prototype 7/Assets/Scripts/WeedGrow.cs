@@ -6,13 +6,14 @@ public class WeedGrow : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int currentStage = 0;
     private float growthTimer = 0f;
-    public float timeBetweenStages = 5f;
+    public float timeBetweenStages = 1f; //weed regular grow speed
     public GameObject seedOverlay;
     public AudioClip pluckSound;
     private AudioSource audioSource;
     private bool killed = false;
     private WeedSpawner weedSpawner;
     private bool seeded = false;
+    private bool isRaining = false;
 
     void Start()
     {
@@ -41,15 +42,15 @@ public class WeedGrow : MonoBehaviour
     {
         if (seeded) return;
 
-        growthTimer += Time.deltaTime;
+        growthTimer += Time.deltaTime * (isRaining ? 4f:1f); // grows four times faster when rain
 
-        if (growthTimer >= timeBetweenStages && currentStage < growthStages.Length - 1)
+        if (growthTimer >= timeBetweenStages && currentStage < 2)
         {
             currentStage++;
             spriteRenderer.sprite = growthStages[currentStage];
             growthTimer = 0f;
         }
-        else if (currentStage == growthStages.Length - 1)
+        else if (currentStage >= 2)
         {
             seedOverlay.SetActive(true);
             weedSpawner.UpdateSeedCount(true);
@@ -75,5 +76,15 @@ public class WeedGrow : MonoBehaviour
         }
 
         Destroy(gameObject, pluckSound.length);
+    }
+
+    public void StartRain()
+    {
+        isRaining = true;
+    }
+
+    public void StopRain()
+    {
+        isRaining = false;
     }
 }

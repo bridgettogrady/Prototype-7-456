@@ -9,7 +9,7 @@ public class WeedSpawner : MonoBehaviour
     private int currentWeeds = 0;
     private int seedAmount = 0;
     private float spawnTimer = 0f;
-    public float invokeInteval = 1f;
+    public float invokeInteval = 0.2f; //weed regular scale spawn rate
 
     void Update()
     {
@@ -24,7 +24,12 @@ public class WeedSpawner : MonoBehaviour
 
     void SpawnWeed()
     {
-        if (currentWeeds >= maxWeeds) return;
+        if (currentWeeds >= maxWeeds)
+        {
+            //Lose
+            //This never get tiggered somehow but optional to have
+            Debug.Log("Lose");
+        }
         float spawnXPos = Random.Range(-8.8f, 8.6f);
         Vector2 spawnPos = new Vector2(spawnXPos, spawnYPos);
 

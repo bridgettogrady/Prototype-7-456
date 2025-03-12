@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5ca1b027ca2cd49b64aef480bd4d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weed1: {fileID: 2717769778489711148, guid: 482d1b2d573da1f419fd1cf097d19230, type: 3}
-  weed2: {fileID: -7284213801322074910, guid: 72f5c5e3d075a7442950c8291dda7548, type: 3}
-  weed3: {fileID: -8136313614316460403, guid: 19450c5cd7eaf7149b37cb866558c008, type: 3}
+  weed1: {fileID: -7294770388298961331, guid: 24c4eb4c2241ad944a6367e1471d9999, type: 3}
+  weed2: {fileID: 1246539384965993250, guid: 5a7c791ff8057d647807023914344705, type: 3}
+  weed3: {fileID: -90727651597952651, guid: efef4ee0004600142bb5b589e12c3637, type: 3}
   growthInterval: 5
 --- !u!58 &3436515350013579160
 CircleCollider2D:

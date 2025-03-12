@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class WeedSpawner : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class WeedSpawner : MonoBehaviour
         float spawnXPos = Random.Range(-8.8f, 8.6f);
         Vector2 spawnPos = new Vector2(spawnXPos, spawnYPos);
 
-        Instantiate(weedPrefab, spawnPos, Quaternion.identity);
+        GameObject weed = Instantiate(weedPrefab, spawnPos, Quaternion.identity);
         currentWeeds++;
     }
 

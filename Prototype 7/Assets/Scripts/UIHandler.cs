@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class UIHandler : MonoBehaviour
 {
     public Image winImage;
-    public GameObject weedSpawner;
+    public GameObject spawner;
     private bool won = false;
     private AudioSource audioSource;
     public AudioClip winSound;
+    public GameObject flower;
+    public float yPos;
+    public float maxX;
 
     void Start() {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -19,7 +22,7 @@ public class UIHandler : MonoBehaviour
             return;
         }
         audioSource.PlayOneShot(winSound, 0.5f);
-        winImage.gameObject.SetActive(true);
-        winImage.enabled = true;
+        spawner.SetActive(false);
+        Time.timeScale = 0;
     }
 }

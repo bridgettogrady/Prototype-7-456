@@ -5,6 +5,8 @@ public class FlowerGrow : MonoBehaviour
     public Sprite[] growthStages;
     public UIHandler UI;
     public FlowerManager manager;
+    public GameObject bud;
+    private SpriteRenderer budRenderer;
 
     private SpriteRenderer spriteRenderer;
     private int currentStage = 0;
@@ -17,6 +19,7 @@ public class FlowerGrow : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = growthStages[currentStage];
+        budRenderer = bud.GetComponent<SpriteRenderer>();
     }   
 
     void Update()
@@ -36,6 +39,7 @@ public class FlowerGrow : MonoBehaviour
         }
         else if (currentStage >= 3)
         {
+            budRenderer.enabled = true;
             UI.Win();
         }
     }

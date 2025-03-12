@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class FlowerManager : MonoBehaviour
 {
     private int numDead = 0;
+    public GameObject spawner;
 
     public void FlowerDead() {
         numDead++;
@@ -18,6 +19,8 @@ public class FlowerManager : MonoBehaviour
 
     public void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
+            spawner.SetActive(true);
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } 
         if (Input.GetKeyDown(KeyCode.Escape))

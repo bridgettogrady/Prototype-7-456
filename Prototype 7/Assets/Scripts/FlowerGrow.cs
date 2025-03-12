@@ -3,6 +3,9 @@ using UnityEngine;
 public class FlowerGrow : MonoBehaviour
 {
     public Sprite[] growthStages;
+    public UIHandler UI;
+    public FlowerManager manager;
+
     private SpriteRenderer spriteRenderer;
     private int currentStage = 0;
     private float growthTimer = 0f;
@@ -14,8 +17,6 @@ public class FlowerGrow : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = growthStages[currentStage];
-
-        winUI.SetActive(false);
     }   
 
     void Update()
@@ -35,7 +36,7 @@ public class FlowerGrow : MonoBehaviour
         }
         else if (currentStage >= 3)
         {
-            //win
+            UI.Win();
         }
     }
 
@@ -47,6 +48,7 @@ public class FlowerGrow : MonoBehaviour
         }
         if (nearByWeed >= 5)
         {
+            manager.FlowerDead();
             Destroy(gameObject);
         }
     }

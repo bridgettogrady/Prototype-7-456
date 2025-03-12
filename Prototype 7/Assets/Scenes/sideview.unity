@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weedPrefab: {fileID: 5855578369630752850, guid: 71e4323622b8b3446b05723858f4d573, type: 3}
   maxWeeds: 20
-  spawnYPos: -4
+  spawnYPos: -3.75
   invokeInteval: 0.3
 --- !u!4 &44836597
 Transform:

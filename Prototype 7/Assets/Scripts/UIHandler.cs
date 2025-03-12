@@ -21,7 +21,6 @@ public class UIHandler : MonoBehaviour
         if (won) {
             return;
         }
-        audioSource.PlayOneShot(winSound, 0.5f);
         spawner.SetActive(false);
         Time.timeScale = 0;
     }

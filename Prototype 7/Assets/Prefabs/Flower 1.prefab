@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: 8558203965515749781, guid: 1c3f526e89a79af4783a6383dc3590c6, type: 3}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: -3005151844095163446, guid: e05edb74849091d4ca2746321de25643, type: 3}
   - {fileID: 4566058158931647776, guid: ccc60ffa02491844b9602f603058dc58, type: 3}
   - {fileID: -1483075243877202050, guid: f3486cb238433784098548aa0eda882a, type: 3}
